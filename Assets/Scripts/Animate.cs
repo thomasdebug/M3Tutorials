@@ -6,24 +6,40 @@ using UnityEngine;
 public class Animate : MonoBehaviour
 {
     private Animator ani;
-    // Start is called before the first frame update
+
     void Start()
     {
+        //Pak het animator component en sla die op in de variabele
         ani = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
+        //Check voor verticale input
         if (Input.GetAxis("Vertical") > 0)
         {
-            ani.SetTrigger("Dance");
+            //is de waarde groter dan 0 dan heb je een knop naar boven ingedrukt
+            //Roep de juiste trigger aan!
+            ani.SetTrigger("Walk");
+            //SetTrigger is trigger activeren
             ani.ResetTrigger("Idle");
+            ani.ResetTrigger("WalkR");
+            //ResetTrigger is Trigger de-activeren
+        }
+        else if (Input.GetAxis("Vertical") < 0)
+        {
+            //is de waarde kleiner dan 0 dan heb je een knop naar beneden ingedrukt
+            //Roep de juiste trigger aan
+            ani.SetTrigger("WalkR");
+            ani.ResetTrigger("Idle");
+            ani.ResetTrigger("Walk");
         }
         else
         {
+            //is de waarde 0 dan heb je niets ingedrukt
+            //Roep de juiste trigger aan
             ani.SetTrigger("Idle");
-            ani.ResetTrigger("Dance");
+            ani.ResetTrigger("Walk");
+            ani.ResetTrigger("WalkR");
         }
     }
 }
