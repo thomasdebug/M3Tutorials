@@ -11,3 +11,8 @@ ik heb een model geanimeerd
 [Script](Assets/Scripts/MoveBasic.cs)
 [Script](Assets/Scripts/Animate.cs)
 ik kan mijn model bewegen in 3d
+# Tutorial 3
+![Tutorial3](Tutorial3.gif)
+[movement](Assets/Scripts/MoveBasic.cs)
+de cube kan op platformen springen
+
