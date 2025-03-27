@@ -10,6 +10,7 @@ public class MoveBasic : MonoBehaviour
     private float speed = 5.0f; // Set player's movement speed.
     public Rigidbody rb; // Reference to player's Rigidbody.
     public bool onFloor;
+    [SerializeField] private float rotSpeed = 50f;
     // Start is called before the first frame update
     private void Start()
     {
@@ -26,26 +27,9 @@ public class MoveBasic : MonoBehaviour
 
     void Update()
     {
-
-
-
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.position += Vector3.right * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.position += Vector3.left * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb.position += Vector3.forward * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            rb.position += Vector3.back * speed * Time.deltaTime;
-        }
+        Vector3 positionUpdate = transform.position + Input.GetAxis("Vertical") * transform.forward * speed * Time.deltaTime;
+        transform.position = positionUpdate;
+        transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime, 0));
         if (Input.GetKeyDown(KeyCode.Space) && onFloor == true)
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
