@@ -15,4 +15,10 @@ ik kan mijn model bewegen in 3d
 ![Tutorial3](Tutorial3.gif)
 [movement](Assets/Scripts/MoveBasic.cs)
 de cube kan op platformen springen
+# Tutorial 4
+![Tutorial4](Tutorial4.gif)
+[Pickup](Assets/Scripts/GetPickup.cs)
+[Score](Assets/Scripts/KeepScore.cs)
+[Audio](/Assets/Fx/pickupCoin.wav)
+pickup systeem compleet
 
