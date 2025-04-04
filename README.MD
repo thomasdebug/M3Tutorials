@@ -21,4 +21,10 @@ de cube kan op platformen springen
 [Score](Assets/Scripts/KeepScore.cs)
 [Audio](/Assets/Fx/pickupCoin.wav)
 pickup systeem compleet
+# Tutorial 5
+![Tutorial5](Tutorial5.gif)
+[Kill](Assets/Scripts/KillOnHit.cs)
+[Bullet](/Assets/Scripts/MoveBullet.cs)
+[Bullet](/Assets/Scripts/MoveBullet.cs)
+bullet en enemy kill scripts compleet
 
