@@ -27,4 +27,8 @@ pickup systeem compleet
 [Bullet](/Assets/Scripts/MoveBullet.cs)
 [Bullet](/Assets/Scripts/MoveBullet.cs)
 bullet en enemy kill scripts compleet
+# Tutorial 6
+![Tutorial6](Tutorial6.gif)
+[Scripts](Assets/Scripts/)
+bullet shoot is gedaan
 
